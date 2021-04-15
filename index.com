@@ -7,27 +7,31 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:14px;}
+body {font-size:18px;}
+
+
 
 .w3-half img:hover{opacity:1}
 </style>
 <body>
+<body class="w3-content" style="max-width:1300px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:200px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
+<nav class="w3-sidebar w3-bar-block w3-black w3-collapse w3-top w3-right" style="z-index:3;width:200px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
     <h3 class="w3-padding-64"><b>XIE<br>Tong</b></h3>
   </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="#news" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">News</a> 
-    <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Projects</a> 
-    <a href="#talks" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Talks</a> 
-    <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research</a> 
-    <a href="#awards" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Awards</a>
+  <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
+    <a href="#home" class="w3-bar-item w3-button">Home</a>
+    <a href="#news" class="w3-bar-item w3-button">News</a>
+    <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+    <a href="#talks" class="w3-bar-item w3-button">Talks</a>
+    <a href="#research" class="w3-bar-item w3-button">Research</a>
+    <a href="#awards" class="w3-bar-item w3-button">Awards</a>
   </div>
 </nav>
+
+
 
 
 
@@ -35,19 +39,22 @@ body {font-size:14px;}
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:200px;margin-right:10px">
+<div class="w3-main" style="margin-left:250px;margin-right:10px">
 
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:160px" id="home">
- 
 
-  <div class="w3-row-padding">
-    <div class="w3-center">
-     <img src="/w3images/kitchenconcrete.jpg" style="width:35%"  alt="Concrete meets bricks">
-     <h3 class="w3-center">Tong XIE</h3>
-     <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-     
-    </div>
+<!-- The Home Section -->
+    <div class="w3-container w3-center w3-padding-32" id="home" style=margin-top:200px>
+    	<img style="width: 80%;max-width: 320px" alt="profile photo" src="images/Yunhe_new.jpg">
+    	<h1>Tong XIE</h1>
+	      <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
+	        I did my bachelors at school of biotechnology and bioengineering, <a href="https://www.ecust.edu.cn/">East China University of Science and Technology</a>, Shanghai, where I was co-advised by Prof. <a href="https://biotech.ecust.edu.cn/2018/0329/c7935a74416/page.htm">Xueting Liu</a></a> and Prof. <a href="https://biotech.ecust.edu.cn/2016/1019/c7935a56621/page.htm">Lixin Zhang</a></a>.
+	      </p>
+	      <p class="w3-center">
+	        <a href="mailto:10160523@mail.ecust.edu.cn">Email</a> &nbsp/&nbsp
+	        Google Scholar</a> 
+	      </p>
+        </tbody></table>
+  </div>
 
 
   <!-- News -->
