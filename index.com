@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>W3.CSS Template</title>
+<title>Tong's Homepage</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -44,7 +44,7 @@ body {font-size:18px;}
 
 <!-- The Home Section -->
     <div class="w3-container w3-center w3-padding-32" id="home" style=margin-top:200px>
-    	<img style="width: 80%;max-width: 320px" alt="profile photo" src="images/Yunhe_new.jpg">
+    	<img style="width: 80%;max-width: 320px" alt="profile photo" src="main/my%20photo.jpeg">
     	<h1>Tong XIE</h1>
 	      <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
 	        I did my bachelors at school of biotechnology and bioengineering, <a href="https://www.ecust.edu.cn/">East China University of Science and Technology</a>, Shanghai, where I was co-advised by Prof. <a href="https://biotech.ecust.edu.cn/2018/0329/c7935a74416/page.htm">Xueting Liu</a></a> and Prof. <a href="https://biotech.ecust.edu.cn/2016/1019/c7935a56621/page.htm">Lixin Zhang</a></a>.
