@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Tong's Homepage</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Montserrat", sans-serif}
-body {font-size:18px;}
-
-
-
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 </style>
 <body>
-<body class="w3-content" style="max-width:1100px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-collapse w3-top w3-right" style="z-index:3;width:150px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
     <h3 class="w3-padding-64"><b>XIE<br>Tong</b></h3>
   </div>
-  <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
-    <a href="#home" class="w3-bar-item w3-button">Home</a>
-    <a href="#news" class="w3-bar-item w3-button">News</a>
-    <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-    <a href="#conference" class="w3-bar-item w3-button">Conference</a>
-    <a href="#research" class="w3-bar-item w3-button">Research</a>
-    <a href="#awards" class="w3-bar-item w3-button">Awards</a>
+  <div class="w3-bar-block">
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#news" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">News</a> 
+    <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Projects</a> 
+    <a href="#conference" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Conference</a> 
+    <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research</a> 
+    <a href="#awards" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Awards</a>
   </div>
 </nav>
 
-
-
-
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>XIE Tong</span>
+</header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:180px;margin-right:10px">
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-
-<!-- The Home Section -->
-    <div class="w3-container w3-center w3-padding-32" id="home" >
-    	<img style="width: 80%;max-width: 320px" alt="profile photo" src="my_photo.jpeg">
+  <!-- Home -->
+  <div class="w3-container w3-center w3-padding-32" id="home">
+   <img style="width: 80%;max-width: 320px" alt="profile photo" src="my_photo.jpeg">
     	<h1>Tong XIE</h1>
 	      <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
 	        I did my bachelors at school of biotechnology and bioengineering, <a href="https://www.ecust.edu.cn/">East China University of Science and Technology</a>, Shanghai, where I was co-advised by Prof. <a href="https://biotech.ecust.edu.cn/2018/0329/c7935a74416/page.htm">Xueting Liu</a></a> and Prof. <a href="https://biotech.ecust.edu.cn/2016/1019/c7935a56621/page.htm">Lixin Zhang</a></a>.
@@ -55,14 +54,24 @@ body {font-size:18px;}
 	      </p>
         </tbody></table>
   </div>
+  
+ 
 
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
 
   <!-- News -->
-  <div class="w3-container w3-light-grey w3-padding-32" id="news">
-    <h1 class="w3-xxxlarge w3-text-black" style="width:90%;margin-right:0px;margin-left:0px;max-width:900px"><b>News</b></h1>
-      <p><li> 2020.12 &emsp; I am engaged in scientific research in <a href="http://www.f.u-tokyo.ac.jp/~tennen/head.htm">Laboratory of Natural Products Chemistry</a>, the University of Tokyo.</li></p>
+  <div class="w3-container  w3-light-grey" id="news" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>News</b></h1>
+    
+    <p><li> 2020.12 &emsp; I am engaged in scientific research in <a href="http://www.f.u-tokyo.ac.jp/~tennen/head.htm">Laboratory of Natural Products Chemistry</a>, the University of Tokyo.</li></p>
       <p > <li> 2020.06 &emsp; I acquire a engineering degree from  <a href="https://www.ecust.edu.cn/">East China University of Science and Technology</a>.</li></p>
-     
      <p><li> 2019.11 &emsp; I attend an academic conference, International Conference on Metabolic Sciences, <a href="http://www.icms-sjtu.org/">ICMS 2019</a>.</li></p>
      <p><li> 2019.09 &emsp; I start to work on my undergraduation project.</li></p>
      <p><li> 2019.07 &emsp; I have an intership in <a href="http://www.shanghaipasteur.cas.cn/">Institut Pasteur of Shanghai Chinese Academy of Science</a> for two months.</li></p>
@@ -72,13 +81,12 @@ body {font-size:18px;}
   
   <!-- Projects -->
   <div class="w3-container" id="projects" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-black"><b>Projects</b></h1>
-    <div class="w3-padding-16">
-    <div class="w3-margin-bottom">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Projects</b></h1>
+      <div class="w3-padding-16 w3-margin-bottom">
       <ul class="w3-ul w3-dark-grey">
-        <li class="w3-padding-16 w3-justify">1. Establishment of Efficient Technology for Combinatorial Biosynthesis</li>
+        <li class="w3-padding-16 w3-justify">1. Establishment of Efficient Technology for Combinatorial Biosynthesis.</li>
       </ul>
-    </div>
+ 
     <p class="w3-justify">
     Many biosynthetic genes in plants do not form gene cluster. Therefore, the localization of enzymes and protein-protein interactions are important for the efficient synthesis of plant natural products. Metabolon is one of the mechanisms in the plant to increase the efficiency of biosynthesis. When we perform the combinatorial biosynthesis, the enzymes from different sources are used to produce target products. Because it is difficult to make interaction between the enzymes from different organisms, other methods to improve the efficiency of metabolic pathway is required. To establish the efficient technology for combinatorial biosynthesis, we will focus on the Bacterial Micro-Compartment (BMC) to localize the enzymes. Bacterial microcompartments (BMCs) are self-assembling organelles that consist of an enzymatic core that is encapsulated by a selectively permeable protein shell. BMCs contain enzymes that catalyze sequential reactions and a private pool of cofactors within a protein shell. Because they self-assemble entirely from proteins, BMCs are becoming a viable platform for engineering novel nanoreactors.<br><br>
     The recognition peptides to encapsulate have been identified. Therefore, the first, the recognition peptides will be engineered to improve the encapsulation. Then, the target enzymes will be fused with engineered leader peptides to localize the enzymes.
@@ -90,55 +98,48 @@ The BMC of <i>Salmonella enterica</i> is related to ethanolamine utilization (Eu
    
   
       <ul class="w3-ul w3-dark-grey">
-        <li class="w3-padding-16 w3-justify">2. Target Isolation of Pyridinedione Alkaloids from Strain <i>Phaeobotryon Cupressi</i> 12020 Based on Genomic Information and LC-MS</li>
+        <li class="w3-padding-16 w3-justify">2. Target Isolation of Pyridinedione Alkaloids from Strain <i>Phaeobotryon Cupressi</i> 12020 Based on Genomic Information and LC-MS.</li>
       </ul>
        <p class="w3-justify">
     Fungi have high biodiversity and are an important source of natural products. In recent years, more than 50% of natural products with new structures and new activities come from fungi. Therefore, mining novel active compounds from fungi has been a hot topic in the field of natural product research. In the post-genomic era, genome mining strategies have revealed a large number of cryptic biosynthetic gene clusters and genomic mining has become increasingly important in the process of mining new natural products with the rapid development of high-throughput technologies. So how to achieve the efficient identification of novel compound structures from the prediction of unique biosynthetic gene clusters of natural products? It is of great importance to further establish two-dimensional NMR detection technology to directly identify nuclear magnetic signals related to the structure of new compounds from crude extracts. Based on this, we proposed a strategy that combines two-dimensional NMR and genomic information mining to study novel biosynthetic gene clusters and their corresponding products in fungi, in order to initially establish an efficient and rapid platform for identifying novel fungal compounds.<br>
     </p>
    <center><img style="width: 100%;max-width: 320px" alt="Flow Diagram of Research Project" src="Projects/Flow_Diagram_of_Research_Project.png"></center>
    <center><b><p class="w3-medium">Figure 2-1: Flow Diagram of Research Project</p></b></center>
+  </div>
 
- 
- 
+
 
   <!-- Conference -->
   <div class="w3-container" id="conference" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-black"><b>Conference</b></h1>
-   
-  <div class="w3-padding-16">
-    <div class="w3-margin-bottom">
-      
+    <h1 class="w3-xxxlarge w3-text-red"><b>Conference</b></h1>
+     
       <ul class="w3-ul w3-dark-grey">
         <li class="w3-padding-16">TBA</li>
         <li class="w3-light-grey w3-padding-16">2019.11 &emsp; Audience, International Conference on Metabolic Sciences, <a href="http://www.icms-sjtu.org/">ICMS 2019</a></li>
       </ul>
-    </div>
-        
-  
+  </div>
+
   
   <!-- Research -->
   <div class="w3-container" id="research" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-black"><b>Research</b></h1>
-      <div class="w3-padding-35">
-    <div class="w3-margin-bottom">
-      <h3> <strong>Papers:</strong></h3>
-    <p><strong>TBA</strong></p>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Research</b></h1>
 
+     <h3> <strong>Papers:</strong></h3>
+    <p><strong>TBA</strong></p>
+    
   </div>
 
- <!-- Awards -->
-<div class="w3-container" id="awards" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-black"><b>Awards</b></h1>
-
-  <div class="w3-padding-16">
+  <!-- Awards -->
+  <div class="w3-container" id="awards" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Awards</b></h1>
+   <div class="w3-padding-16">
     <div class="w3-margin-bottom">
       <ul class="w3-ul w3-light-grey">
         <li class="w3-dark-grey w3-padding-16">2020 &emsp; Graduate Merit Scholarship, East China University of Science and Technology</li>
         <li class="w3-light-grey w3-padding-16">2020 &emsp; Excellent Graduation Thesis, East China University of Science and Technology</li>
       </ul>
-    </div>
-        
     
+  </div>
 
 <!-- End page content -->
 </div>
@@ -148,23 +149,20 @@ The BMC of <i>Salmonella enterica</i> is related to ethanolamine utilization (Eu
   	Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>.<br>
 	
 	No.
-	<script type="text/javascript">
-	var sc_project=12347113; 
-	var sc_invisible=0; 
-	var sc_security="21aca5d1"; 
-	var sc_https=1; 
-	var scJsHost = "https://";
-	document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-	"statcounter.com/counter/counter.js'></"+"script>");
-	</script> Visitor Since Apr 2021. Welcome!
-	<noscript>
-		<div class="statcounter"><a title="Web Analytics Made Easy -
-	StatCounter" href="https://statcounter.com/" target="_blank"><img
-	class="statcounter" src="https://c.statcounter.com/12347113/0/21aca5d1/0/"
-	alt="Web Analytics Made Easy - StatCounter"></a></div>
-	</noscript>
-	
-
+	<!-- Default Statcounter code for My Homepage https://shatoo-maker.github.io/
+-->
+<script type="text/javascript">
+var sc_project=12514763; 
+var sc_invisible=1; 
+var sc_security="294c54b6"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/12514763/0/294c54b6/1/" alt="Web
+Analytics"></a></div></noscript>
+<!-- End of Statcounter Code -->
   </div>
 
 <script>
